@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class MoveEffect : MonoBehaviour
+[CreateAssetMenu(fileName = "Move", menuName = "Ability/Effect/Move")]
+[Serializable]
+public class MoveEffect : AbilityEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Apply(Transform target, Vector3 info)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        target.GetComponent<IDashable>()?.Dash(info);
     }
 }
