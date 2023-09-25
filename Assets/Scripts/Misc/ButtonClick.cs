@@ -16,6 +16,6 @@ public class ButtonClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private static void PlayClip(string n) {
         var clip = Addressables.LoadAssetAsync<AudioClip>(n).WaitForCompletion();
-        AudioSource.PlayClipAtPoint(clip, Vector3.zero);
+        AudioSource.PlayClipAtPoint(clip, Vector3.zero, 0.5f);
     }
 }
