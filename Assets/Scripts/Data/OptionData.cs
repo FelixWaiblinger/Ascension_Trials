@@ -9,4 +9,11 @@ public class OptionData : ScriptableObject
     public bool StaticCamera;
     public bool DamageNumbers;
     public bool ControllerInput;
+
+    [SerializeField] private VoidEventChannel _optionChangeEvent;
+
+    public void ApplyChanges()
+    {
+        _optionChangeEvent.RaiseVoidEvent();
+    }
 }

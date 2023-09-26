@@ -4,8 +4,12 @@ using AYellowpaper.SerializedCollections;
 
 public abstract class Ability : ScriptableObject
 {
-    public float Cooldown;
+    public Sprite Icon;
+    public float CastTime;
+    public float ActiveTime;
+    public float CooldownTime;
     public float Range;
+    public string AnimName;
     public SerializedDictionary<AbilityEffect, Vector3> Effects;
 
     // returns the amount of charges left

@@ -198,10 +198,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _hud: {fileID: 3366143810163054756}
   _dashSpeed: 30
-  _dashDuration: 0.1
-  _dashCooldown: 1
 --- !u!114 &1604631640461836092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260b98319b8c4a444a70c16351b6c539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _options: {fileID: 11400000, guid: 517c035c39031b54186d3e0ca9c96506, type: 2}
+  _optionChangeEvent: {fileID: 11400000, guid: d03f7a0102c92dd4794a49977342abc2, type: 2}
   _target: {fileID: 829146161883953939}
   _focusPoint: {fileID: 9098926243010864668}
   _lookAhead: 1
@@ -1618,7 +1617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3752720454912471307}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268346, y: 0.000000015896623, z: -0.0000000065845964, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268346, y: -0.000000015896623, z: 0.0000000065845964, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 8, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

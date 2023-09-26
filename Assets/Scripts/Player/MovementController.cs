@@ -7,12 +7,12 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
     [SerializeField] private FloatEventChannel _moveLockEvent;
 
     [Header("Movement")]
-    [SerializeField] private Animator _animator;
     [SerializeField] private Transform _visuals;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _turnSpeed;
     [SerializeField] private AnimationCurve _accelerationCurve;
     private Rigidbody _rigidBody;
+    private Animator _animator;
     private Vector3 _moveDirection, _lookDirection;
     private float _accelerationTime = 0, _lockTimer = 0;
 
@@ -25,7 +25,7 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
 
     public override void OnNetworkSpawn()
     {
-        if (!IsOwner) Destroy(this);
+        if (!IsOwner) this.enabled = false;
     }
 
     void OnEnable()
@@ -43,6 +43,12 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
     {
         _rigidBody = GetComponent<Rigidbody>();
         _collider = GetComponent<CapsuleCollider>();
+        _animator = GetComponentInChildren<Animator>();
+    }
+
+    public void Init(float speed)
+    {
+        _moveSpeed = speed;
     }
 
     #endregion

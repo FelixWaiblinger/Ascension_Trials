@@ -50,31 +50,37 @@ public class SettingsUI : MonoBehaviour
     public void OnMusicVolume(float value)
     {
         _options.MusicVolume = value;
+        _options.ApplyChanges();
     }
 
     public void OnEffectVolume(float value)
     {
         _options.EffectVolume = value;
+        _options.ApplyChanges();
     }
 
     public void OnTargetFPS(string value)
     {
         _options.TargetFPS = int.Parse(value);
+        _options.ApplyChanges();
     }
 
     public void OnStaticCamera(bool value)
     {
         _options.StaticCamera = value;
+        _options.ApplyChanges();
     }
 
     public void OnDamageNumbers(bool value)
     {
         _options.DamageNumbers = value;
+        _options.ApplyChanges();
     }
 
     public void OnInput()
     {
         _options.ControllerInput = !_options.ControllerInput;
+        _options.ApplyChanges();
     }
 
     public void Close()

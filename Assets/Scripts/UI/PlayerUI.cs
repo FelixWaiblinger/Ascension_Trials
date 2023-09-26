@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -25,6 +26,19 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TMP_Text _ultimateNumber;
     [SerializeField] private Image _dashCooldown;
     [SerializeField] private TMP_Text _dashNumber;
+    private Image _attackIcon;
+    private Image _specialIcon;
+    private Image _ultimateIcon;
+    private Image _dashIcon;
+
+    public void Init(float health, Dictionary<Slot, Ability> abilities)
+    {
+        _healthNumber.text = $"{(int)health}/{(int)health}";
+        _attackIcon.sprite = abilities[Slot.Attack].Icon;
+        _specialIcon.sprite = abilities[Slot.Special].Icon;
+        _ultimateIcon.sprite = abilities[Slot.Ultimate].Icon;
+        _dashIcon.sprite = abilities[Slot.Dash].Icon;
+    }
 
     void Update()
     {

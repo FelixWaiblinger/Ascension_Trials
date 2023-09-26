@@ -4,10 +4,11 @@ public class StatusController : MonoBehaviour, IDamagable, IHealable
 {
     [SerializeField] private VoidEventChannel _deathEvent;
     [SerializeField] private PlayerUI _hud;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private float _maxHealth;
     [SerializeField] private int _healthPotions;
     [SerializeField] private float _healDuration;
+    private Animator _animator;
+    private float _armor;
+    private float _maxHealth;
     private float _currentHealth;
     private float _healDurationTimer;
 
@@ -25,10 +26,14 @@ public class StatusController : MonoBehaviour, IDamagable, IHealable
     
     void Start()
     {
+        _animator = GetComponentInChildren<Animator>();
         _currentHealth = _maxHealth;
+    }
 
-        _hud.UpdateUIElement(UIElement.Health, _currentHealth, _maxHealth);
-        _hud.UpdateUIElement(UIElement.Potion, _healthPotions, _healthPotions);
+    public void Init(float health, float armor)
+    {
+        _maxHealth = health;
+        _armor = armor;
     }
 
     #endregion
