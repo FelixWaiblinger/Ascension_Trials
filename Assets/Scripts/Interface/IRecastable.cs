@@ -3,6 +3,7 @@ using UnityEngine;
 public interface IRecastable
 {
     public int GetCharges();
-    public string GetAnimName(int charge);
+    public float GetRecastTime();
+    public AnimationClip GetAnimation(int charge);
     public void Activate(Transform origin, int charge);
 }

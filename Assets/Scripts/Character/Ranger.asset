@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Ranger
   Health: 90
   Armor: 5
-  Speed: 3.1
+  Speed: 8.2
   Abilities:
     _serializedList:
     - Key: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
       Value: {fileID: 0}
     - Key: 3
       Value: {fileID: 0}
-  Visuals: {fileID: 0}
+  Visuals: {fileID: 8189980434977739222, guid: b7038fcc5d9120c4d8325d66af810d7d, type: 3}

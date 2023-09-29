@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Necromancer
   Health: 100
   Armor: 7
-  Speed: 2.9
+  Speed: 7.8
   Abilities:
     _serializedList:
     - Key: 0

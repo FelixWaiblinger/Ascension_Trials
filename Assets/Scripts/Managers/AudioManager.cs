@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour
         else if (Fade(-_fadeSpeed * Time.deltaTime))
         {
             _themePlayer.clip = _themes[_nextClip];
+            _themePlayer.Play();
             _nextClip = -2;
         }
     }

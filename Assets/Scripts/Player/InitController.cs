@@ -7,16 +7,13 @@ public class InitController : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        Debug.Log($"Initializing client {NetworkManager.Singleton.LocalClientId}");
         var character = _gameData.Players[NetworkManager.Singleton.LocalClientId];
-        var abilities = GetComponent<AbilityController>();
-        var movement = GetComponent<MovementController>();
-        var status = GetComponent<StatusController>();
-        var hud = GetComponentInChildren<PlayerUI>();
 
         Instantiate(character.Visuals, transform);
-        abilities.Init(character.Abilities);
-        movement.Init(character.Speed);
-        status.Init(character.Health, character.Armor);
-        hud.Init(character.Health, character.Abilities);
+        GetComponent<AbilityController>().Init(character.Abilities);
+        GetComponent<MovementController>().Init(character.Speed);
+        GetComponent<StatusController>().Init(character.Health, character.Armor);
+        GetComponentInChildren<PlayerUI>().Init(character.Health, character.Abilities);
     }
 }

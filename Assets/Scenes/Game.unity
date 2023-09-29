@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e775202e7b463f349ab4cff7afeb68ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioEvent: {fileID: 0}
 --- !u!1 &1519578586
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0704c5428d273f74eb31c0590429ac70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 440449775408231757, guid: 8cc77ced8e6e50a45a1eb0e5862b6f5a,
+  _playerPrefab: {fileID: 732201005910044661, guid: 8cc77ced8e6e50a45a1eb0e5862b6f5a,
     type: 3}
   _exitEvent: {fileID: 11400000, guid: 13514f7902a6675458140e78248a1ea1, type: 2}
 --- !u!4 &1519578589
@@ -896,6 +897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 440449775408231751, guid: 8cc77ced8e6e50a45a1eb0e5862b6f5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 440449775408231756, guid: 8cc77ced8e6e50a45a1eb0e5862b6f5a,
         type: 3}

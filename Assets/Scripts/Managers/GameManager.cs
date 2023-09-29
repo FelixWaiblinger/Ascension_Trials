@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : NetworkBehaviour
 {
-    [SerializeField] private MovementController _playerPrefab;
+    [SerializeField] private InitController _playerPrefab;
     [SerializeField] private IntEventChannel _exitEvent;
 
     #region SETUP
@@ -28,8 +28,7 @@ public class GameManager : NetworkBehaviour
         base.OnDestroy();
         await MatchmakingService.LeaveLobby();
         
-        if (NetworkManager.Singleton != null)
-            NetworkManager.Singleton.Shutdown();
+        NetworkManager.Singleton?.Shutdown();
     }
 
     #endregion

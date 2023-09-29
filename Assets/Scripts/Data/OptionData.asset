@@ -18,3 +18,4 @@ MonoBehaviour:
   StaticCamera: 0
   DamageNumbers: 1
   ControllerInput: 1
+  _optionChangeEvent: {fileID: 11400000, guid: d03f7a0102c92dd4794a49977342abc2, type: 2}

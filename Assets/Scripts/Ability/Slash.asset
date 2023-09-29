@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c125808a5cf0648a96772a94046ec7, type: 3}
   m_Name: Slash
   m_EditorClassIdentifier: 
-  Cooldown: 2
+  Icon: {fileID: 21300000, guid: f94ce4a405bd1c74887c4259c93247e3, type: 3}
+  CastTime: 0.3
+  ActiveTime: 0.0001
+  CooldownTime: 2
   Range: 1.5
+  Animation: {fileID: 0}
   Effects:
     _serializedList:
     - Key: {fileID: 11400000, guid: f14a5524afc8e64409cafd17be5db98e, type: 2}
@@ -28,4 +32,9 @@ MonoBehaviour:
       Value: {x: 12, y: 0, z: 0}
     - Key: {fileID: 11400000, guid: d71071ea134955440bd6373f16daa7dc, type: 2}
       Value: {x: 2, y: 2, z: 1}
+  Animations:
+  - {fileID: 7400000, guid: 5794c679ae6816e48bf835d767610eab, type: 2}
+  - {fileID: 7400000, guid: 8df8a301861cc854ca54dc4ee9d4a12f, type: 2}
+  - {fileID: 7400000, guid: 60a124cdc65c2bb46b80f6a95519ca79, type: 2}
   Charges: 3
+  RecastTime: 2

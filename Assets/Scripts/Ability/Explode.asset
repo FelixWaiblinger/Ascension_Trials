@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdd5b3fb9661474eb8050a06b90bb53, type: 3}
   m_Name: Explode
   m_EditorClassIdentifier: 
-  Cooldown: 10
+  Icon: {fileID: 0}
+  CastTime: 1.5
+  ActiveTime: 0
+  CooldownTime: 0
   Range: 5
+  Animation: {fileID: 0}
   Effects:
     _serializedList:
     - Key: {fileID: 11400000, guid: f14a5524afc8e64409cafd17be5db98e, type: 2}
       Value: {x: 20, y: 0, z: 0}
     - Key: {fileID: 11400000, guid: 28bbebea01afd4f45829ec6b5f5ba5bb, type: 2}
-      Value: {x: 0, y: 0, z: 5}
-  _explosionEffect: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473,
+      Value: {x: 5, y: 0, z: 0}
+  _explosionEffect: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}

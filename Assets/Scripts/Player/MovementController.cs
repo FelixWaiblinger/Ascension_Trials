@@ -1,17 +1,16 @@
 using UnityEngine;
 using Unity.Netcode;
 
-[RequireComponent(typeof(Rigidbody))]
 public class MovementController : NetworkBehaviour, IDashable, IKnockable
 {
     [SerializeField] private FloatEventChannel _moveLockEvent;
 
     [Header("Movement")]
-    [SerializeField] private Transform _visuals;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _turnSpeed;
     [SerializeField] private AnimationCurve _accelerationCurve;
     private Rigidbody _rigidBody;
+    private Transform _visuals;
     private Animator _animator;
     private Vector3 _moveDirection, _lookDirection;
     private float _accelerationTime = 0, _lockTimer = 0;
@@ -39,11 +38,12 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
         _moveLockEvent.OnFloatEventRaised -= Lock;
     }
 
-    void Awake()
+    void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
         _collider = GetComponent<CapsuleCollider>();
         _animator = GetComponentInChildren<Animator>();
+        _visuals = _animator.transform;
     }
 
     public void Init(float speed)
@@ -121,6 +121,7 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
 
     public void Dash(Vector3 info)
     {
+        Debug.Log("Setting dash timer");
         _dashDurationTimer = info.x;
         _collider.enabled = info.y > 0;
     }

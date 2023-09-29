@@ -9,7 +9,7 @@ public abstract class Ability : ScriptableObject
     public float ActiveTime;
     public float CooldownTime;
     public float Range;
-    public string AnimName;
+    public AnimationClip Animation;
     public SerializedDictionary<AbilityEffect, Vector3> Effects;
 
     // returns the amount of charges left

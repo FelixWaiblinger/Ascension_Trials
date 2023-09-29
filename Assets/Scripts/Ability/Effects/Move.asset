@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e4d940405716749aed995d1825971c, type: 3}
-  m_Name: GameData
+  m_Script: {fileID: 11500000, guid: 31d927da8fe0a0b4b9e7e2f41169e042, type: 3}
+  m_Name: Move
   m_EditorClassIdentifier: 
-  Players:
-    _serializedList:
-    - Key: 0
-      Value: {fileID: 11400000, guid: fd5a66e4bfad5a344bae8e8d2e00d88f, type: 2}

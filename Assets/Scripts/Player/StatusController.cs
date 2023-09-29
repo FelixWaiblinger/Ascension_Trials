@@ -27,7 +27,11 @@ public class StatusController : MonoBehaviour, IDamagable, IHealable
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        
         _currentHealth = _maxHealth;
+
+        _hud.UpdateUIElement(UIElement.Health, _currentHealth, _maxHealth);
+        _hud.UpdateUIElement(UIElement.Potion, _healthPotions, _healthPotions);
     }
 
     public void Init(float health, float armor)

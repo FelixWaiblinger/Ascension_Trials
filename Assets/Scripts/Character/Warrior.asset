@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Warrior
   Health: 120
   Armor: 10
-  Speed: 2.8
+  Speed: 7.5
   Abilities:
     _serializedList:
     - Key: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 6312b95655137964b914840f1e872ceb, type: 2}
     - Key: 3
       Value: {fileID: 11400000, guid: 9745e36d218144f43b2d2a39284d033c, type: 2}
-  Visuals: {fileID: 0}
+  Visuals: {fileID: 7647134206250791342, guid: eca256e46e201a04d8734ead648bed29, type: 3}

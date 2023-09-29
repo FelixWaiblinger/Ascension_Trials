@@ -7,10 +7,12 @@ public class Slash : Ability, IRecastable
 {
     public SerializedDictionary<AbilityEffect, Vector3> SecondEffects;
     public SerializedDictionary<AbilityEffect, Vector3> ThirdEffects;
-    public List<string> AnimNames;
+    public List<AnimationClip> Animations;
     public int Charges;
     public int GetCharges() { return Charges; }
-    public string GetAnimName(int charge) { return AnimNames[charge]; }
+    public float RecastTime;
+    public float GetRecastTime() { return RecastTime; }
+    public AnimationClip GetAnimation(int charge) { return Animations[charge]; }
 
     public void Activate(Transform player, int charge)
     {

@@ -14,22 +14,29 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Image _healthBar;
     [SerializeField] private TMP_Text _healthNumber;
     [SerializeField] private float _healthSmoothness;
+    [SerializeField] private Image _potionsIcon;
     [SerializeField] private TMP_Text _potionsNumber;
-    private float _healthBarTarget;
+    private float _healthBarTarget = 1;
 
-    [Header("Abilities")]
+    [Header("Attack")]
+    [SerializeField] private Image _attackIcon;
     [SerializeField] private Image _attackCooldown;
     [SerializeField] private TMP_Text _attackNumber;
+
+    [Header("Special")]
+    [SerializeField] private Image _specialIcon;
     [SerializeField] private Image _specialCooldown;
     [SerializeField] private TMP_Text _specialNumber;
+
+    [Header("Ultimate")]
+    [SerializeField] private Image _ultimateIcon;
     [SerializeField] private Image _ultimateCooldown;
     [SerializeField] private TMP_Text _ultimateNumber;
+
+    [Header("Dash")]
+    [SerializeField] private Image _dashIcon;
     [SerializeField] private Image _dashCooldown;
     [SerializeField] private TMP_Text _dashNumber;
-    private Image _attackIcon;
-    private Image _specialIcon;
-    private Image _ultimateIcon;
-    private Image _dashIcon;
 
     public void Init(float health, Dictionary<Slot, Ability> abilities)
     {
@@ -60,15 +67,6 @@ public class PlayerUI : MonoBehaviour
 
         switch (element)
         {
-            case UIElement.Health:
-                _healthBarTarget = current / max;
-                _healthNumber.text = $"{(int)current}/{(int)max}";
-                break;
-
-            case UIElement.Potion:
-                _potionsNumber.text = cdNumber;
-                break;
-
             case UIElement.Attack:
                 _attackCooldown.fillAmount = current / max;
                 _attackNumber.text = cdNumber;
@@ -87,6 +85,15 @@ public class PlayerUI : MonoBehaviour
             case UIElement.Dash:
                 _dashCooldown.fillAmount = current / max;
                 _dashNumber.text = cdNumber;
+                break;
+
+            case UIElement.Health:
+                _healthBarTarget = current / max;
+                _healthNumber.text = $"{(int)current}/{(int)max}";
+                break;
+
+            case UIElement.Potion:
+                _potionsNumber.text = cdNumber;
                 break;
         }
     }

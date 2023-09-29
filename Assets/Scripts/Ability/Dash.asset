@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b35c5ab64d47e24fa5b05c479d9c690, type: 3}
   m_Name: Dash
   m_EditorClassIdentifier: 
-  Cooldown: 0
+  Icon: {fileID: 21300000, guid: 515cb535853bbbe4dbfcf0342baec0ec, type: 3}
+  CastTime: 0.0001
+  ActiveTime: 0.0001
+  CooldownTime: 2
   Range: 0
+  Animation: {fileID: 7400000, guid: f604f48c5517c2e44964bfd1f54294b7, type: 2}
   Effects:
-    _serializedList: []
+    _serializedList:
+    - Key: {fileID: 11400000, guid: e28143a85314ba0489bce016792aaf3a, type: 2}
+      Value: {x: 0.1, y: 1, z: 0}

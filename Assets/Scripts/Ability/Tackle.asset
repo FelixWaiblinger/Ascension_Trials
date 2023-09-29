@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 585a3ef663030e543bccb7b5c98bfd33, type: 3}
   m_Name: Tackle
   m_EditorClassIdentifier: 
-  Cooldown: 2
+  Icon: {fileID: 0}
+  CastTime: 1
+  ActiveTime: 0
+  CooldownTime: 2
   Range: 2
+  Animation: {fileID: 0}
   Effects:
     _serializedList:
     - Key: {fileID: 11400000, guid: f14a5524afc8e64409cafd17be5db98e, type: 2}
       Value: {x: 8, y: 0, z: 0}
+    - Key: {fileID: 11400000, guid: e28143a85314ba0489bce016792aaf3a, type: 2}
+      Value: {x: 0.2, y: 0, z: 0}
