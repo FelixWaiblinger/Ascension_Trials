@@ -44,6 +44,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1572219758833972885, guid: 96f5bfde0a6b1104cba492fd58df1237,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3369829261111694069, guid: 96f5bfde0a6b1104cba492fd58df1237,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -160,7 +165,7 @@ MonoBehaviour:
   _maxHealth: 20
   _armor: 3
   _moveSpeed: 2.6
-  _ability: {fileID: 0}
+  _ability: {fileID: 11400000, guid: e10f4054ce52d7846aa2988a2f8bff97, type: 2}
   _chargeTime: 1
   _attackRange: 2
   _tackleChargeVisual: {fileID: 1419518834886475946}
