@@ -9,7 +9,8 @@ using Unity.Services.Relay;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public static class MatchmakingService {
+public static class MatchmakingService
+{
     private const int HeartbeatInterval = 15;
     private const int LobbyRefreshRate = 2; // Rate limits at 2
 
@@ -25,7 +26,8 @@ public static class MatchmakingService {
 
     public static event Action<Lobby> CurrentLobbyRefreshed;
 
-    public static void ResetStatics() {
+    public static void ResetStatics()
+    {
         if (Transport != null) {
             Transport.Shutdown();
             Transport = null;
@@ -36,11 +38,14 @@ public static class MatchmakingService {
 
     // Obviously you'd want to add customization to the query, but this
     // will suffice for this simple demo
-    public static async Task<List<Lobby>> GatherLobbies() {
-        var options = new QueryLobbiesOptions {
+    public static async Task<List<Lobby>> GatherLobbies()
+    {
+        var options = new QueryLobbiesOptions
+        {
             Count = 15,
 
-            Filters = new List<QueryFilter> {
+            Filters = new List<QueryFilter>
+            {
                 new(QueryFilter.FieldOptions.AvailableSlots, "0", QueryFilter.OpOptions.GT),
                 new(QueryFilter.FieldOptions.IsLocked, "0", QueryFilter.OpOptions.EQ)
             }
@@ -50,19 +55,19 @@ public static class MatchmakingService {
         return allLobbies.Results;
     }
 
-    public static async Task CreateLobbyWithAllocation(LobbyData data) {
+    public static async Task CreateLobbyWithAllocation(LobbyData data)
+    {
         // Create a relay allocation and generate a join code to share with the lobby
         var a = await RelayService.Instance.CreateAllocationAsync(data.MaxPlayers);
         var joinCode = await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
 
         // Create a lobby, adding the relay join code to the lobby data
-        var options = new CreateLobbyOptions {
-            Data = new Dictionary<string, DataObject> {
+        var options = new CreateLobbyOptions
+        {
+            Data = new Dictionary<string, DataObject>
+            {
                 { Constants.JoinKey, new DataObject(DataObject.VisibilityOptions.Member, joinCode) },
-                { Constants.GameTypeKey, new DataObject(DataObject.VisibilityOptions.Public, data.Type.ToString(), DataObject.IndexOptions.N1) }, {
-                    Constants.DifficultyKey,
-                    new DataObject(DataObject.VisibilityOptions.Public, data.Difficulty.ToString(), DataObject.IndexOptions.N2)
-                }
+                { Constants.DifficultyKey, new DataObject(DataObject.VisibilityOptions.Public, data.Difficulty.ToString(), DataObject.IndexOptions.N1) }
             }
         };
 
@@ -74,24 +79,30 @@ public static class MatchmakingService {
         PeriodicallyRefreshLobby();
     }
 
-    public static async Task LockLobby() {
-        try {
+    public static async Task LockLobby()
+    {
+        try
+        {
             await Lobbies.Instance.UpdateLobbyAsync(_currentLobby.Id, new UpdateLobbyOptions { IsLocked = true });
         }
-        catch (Exception e) {
+        catch (Exception e)
+        {
             Debug.Log($"Failed closing lobby: {e}");
         }
     }
 
-    private static async void Heartbeat() {
+    private static async void Heartbeat()
+    {
         _heartbeatSource = new CancellationTokenSource();
-        while (!_heartbeatSource.IsCancellationRequested && _currentLobby != null) {
+        while (!_heartbeatSource.IsCancellationRequested && _currentLobby != null)
+        {
             await Lobbies.Instance.SendHeartbeatPingAsync(_currentLobby.Id);
             await Task.Delay(HeartbeatInterval * 1000);
         }
     }
 
-    public static async Task JoinLobbyWithAllocation(string lobbyId) {
+    public static async Task JoinLobbyWithAllocation(string lobbyId)
+    {
         _currentLobby = await Lobbies.Instance.JoinLobbyByIdAsync(lobbyId);
         var a = await RelayService.Instance.JoinAllocationAsync(_currentLobby.Data[Constants.JoinKey].Value);
 
@@ -100,27 +111,32 @@ public static class MatchmakingService {
         PeriodicallyRefreshLobby();
     }
 
-    private static async void PeriodicallyRefreshLobby() {
+    private static async void PeriodicallyRefreshLobby()
+    {
         _updateLobbySource = new CancellationTokenSource();
         await Task.Delay(LobbyRefreshRate * 1000);
-        while (!_updateLobbySource.IsCancellationRequested && _currentLobby != null) {
+        while (!_updateLobbySource.IsCancellationRequested && _currentLobby != null)
+        {
             _currentLobby = await Lobbies.Instance.GetLobbyAsync(_currentLobby.Id);
             CurrentLobbyRefreshed?.Invoke(_currentLobby);
             await Task.Delay(LobbyRefreshRate * 1000);
         }
     }
 
-    public static async Task LeaveLobby() {
+    public static async Task LeaveLobby()
+    {
         _heartbeatSource?.Cancel();
         _updateLobbySource?.Cancel();
 
         if (_currentLobby != null)
-            try {
+            try
+            {
                 if (_currentLobby.HostId == Authentication.PlayerId) await Lobbies.Instance.DeleteLobbyAsync(_currentLobby.Id);
                 else await Lobbies.Instance.RemovePlayerAsync(_currentLobby.Id, Authentication.PlayerId);
                 _currentLobby = null;
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Debug.Log(e);
             }
     }
