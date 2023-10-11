@@ -17,7 +17,7 @@ MonoBehaviour:
   ActiveTime: 0
   CooldownTime: 2
   Range: 2
-  Animation: {fileID: 0}
+  Animation: {fileID: 7400000, guid: d6b394e84fe8e054a851451432c268a3, type: 2}
   Effects:
     _serializedList:
     - Key: {fileID: 11400000, guid: f14a5524afc8e64409cafd17be5db98e, type: 2}

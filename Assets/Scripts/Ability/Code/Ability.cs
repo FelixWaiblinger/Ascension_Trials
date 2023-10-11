@@ -12,8 +12,7 @@ public abstract class Ability : ScriptableObject
     public AnimationClip Animation;
     public SerializedDictionary<AbilityEffect, Vector3> Effects;
 
-    // returns the amount of charges left
-    public abstract int Activate(Transform origin);
+    public abstract void Activate(Transform caster);
 
     protected void ApplyEffects(ref SerializedDictionary<AbilityEffect, Vector3> effects, Transform[] targets)
     {

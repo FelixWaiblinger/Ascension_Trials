@@ -5,14 +5,12 @@ public class Shatter : Ability
 {
     public GameObject VisualEffect;
 
-    public override int Activate(Transform player)
+    public override void Activate(Transform caster)
     {
-        var targets = FindTargets(player.position, LayerMask.NameToLayer("Enemy"));
+        var targets = FindTargets(caster.position, LayerMask.NameToLayer("Enemy"));
 
-        Instantiate(VisualEffect, player.position, player.rotation);
+        Instantiate(VisualEffect, caster.position, Quaternion.identity);
 
         ApplyEffects(ref Effects, targets);
-
-        return 0;
     }
 }

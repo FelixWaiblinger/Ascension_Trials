@@ -169,7 +169,7 @@ public class AbilityController : NetworkBehaviour
         {
             // atleast one charge left
             if (_chargeCounters[s] < recastable.GetCharges())
-                _animator.Play(recastable.GetAnimation(_chargeCounters[s]).name);
+                _animator.Play(recastable.GetAnimation(_chargeCounters[s]).name, 0);
             // no more charges left
             else
             {
@@ -178,7 +178,7 @@ public class AbilityController : NetworkBehaviour
             }
         }
         // single-use abilites
-        else _animator.Play(_slots[s].Animation.name);
+        else _animator.Play(_slots[s].Animation.name, 0);
 
         // start actual casting
         _castCurrent = s;

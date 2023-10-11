@@ -3,11 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dash", menuName = "Ability/Dash")]
 public class Dash : Ability
 {
-    public override int Activate(Transform origin)
+    public override void Activate(Transform caster)
     {
-        var player = new Transform[]{origin};
-        ApplyEffects(ref Effects, player);
-
-        return 0;
+        ApplyEffects(ref Effects, new Transform[]{caster});
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Warrior
   Health: 120
   Armor: 10
-  Speed: 7.5
+  Speed: 5.8
   Abilities:
     _serializedList:
     - Key: 0

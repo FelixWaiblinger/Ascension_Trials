@@ -7,7 +7,7 @@ public class CameraController : NetworkBehaviour
     [SerializeField] private Transform _focusPoint;
     [SerializeField] private float _lookAhead;
     [SerializeField] private float _followSmoothness;
-    private Vector3 _targetFocusPoint;
+    private Vector3 _lookDirection;
     private bool _staticCamera = false;
 
     [Header("Options")]
@@ -37,17 +37,17 @@ public class CameraController : NetworkBehaviour
     
     void Update()
     {
+        var speed = _followSmoothness * _lookDirection == Vector3.zero ? 2 : 1;
         _focusPoint.position = Vector3.MoveTowards(
             _focusPoint.position,
-            _targetFocusPoint,
-            _followSmoothness * Time.deltaTime
+            transform.position + _lookDirection,
+            speed * Time.deltaTime
         );
     }
 
     void Look(Vector2 direction)
     {
-        _targetFocusPoint = transform.position
-                          + new Vector3(direction.x, 0, direction.y) * _lookAhead;
+        _lookDirection = new Vector3(direction.x, 0, direction.y) * _lookAhead;
     }
 
     void StaticCamera()

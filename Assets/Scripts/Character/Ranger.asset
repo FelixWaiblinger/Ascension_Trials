@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Ranger
   Health: 90
   Armor: 5
-  Speed: 8.2
+  Speed: 6.2
   Abilities:
     _serializedList:
     - Key: 0

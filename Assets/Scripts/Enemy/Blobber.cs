@@ -2,40 +2,18 @@ using UnityEngine;
 
 public class Blobber : Enemy
 {
-    [Header("Blobber")]
-    [SerializeField] private GameObject _explosionRadiusVisual;
-    private float _explosionTimer;
-
-    void FixedUpdate()
+    protected override void ChargeAttack()
     {
-        if (_isAttacking) return;
+        base.ChargeAttack();
+
+        _chargeVisual.transform.localScale =
+            Vector3.one * Mathf.Clamp(_attackTimer * 3, 0, _ability.Range);
+    }
+
+    protected override void Attack()
+    {
+        base.Attack();
         
-        MoveToTarget();
-    }
-
-    void Update()
-    {
-        if (!_isAttacking) return;
-
-        ChargeExplosion();
-
-        if (_explosionTimer >= _chargeTime) Explode();
-    }
-
-    void ChargeExplosion()
-    {
-        if (!_explosionRadiusVisual.activeSelf)
-            _explosionRadiusVisual.SetActive(true);
-
-        _explosionTimer += Time.deltaTime;
-        var size = Mathf.Clamp(_explosionTimer * 3, 0, _ability.Range);
-        _explosionRadiusVisual.transform.localScale = Vector3.one * size;
-    }
-
-    void Explode()
-    {
-        _ability.Activate(transform);
-
         Destroy(gameObject);
     }
 }

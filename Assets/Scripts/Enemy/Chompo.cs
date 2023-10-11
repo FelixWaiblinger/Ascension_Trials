@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Chompo : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+public class Chompo : Enemy
+{    
+    protected override void ChargeAttack()
     {
-        
-    }
+        base.ChargeAttack();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // _chargeVisual
     }
 }

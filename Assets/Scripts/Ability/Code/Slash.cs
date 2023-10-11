@@ -14,9 +14,9 @@ public class Slash : Ability, IRecastable
     public float RecastTime;
     public float GetRecastTime() { return RecastTime; }
 
-    public void Activate(Transform player, int charge)
+    public void Activate(Transform caster, int charge)
     {
-        var origin = player.position + player.forward * Range;
+        var origin = caster.position + caster.forward * Range;
         var targets = FindTargets(origin, LayerMask.NameToLayer("Enemy"));
 
         switch (charge)
@@ -27,11 +27,9 @@ public class Slash : Ability, IRecastable
         }
     }
 
-    public override int Activate(Transform player)
+    public override void Activate(Transform player)
     {
         Activate(player, 0);
-
-        return 0;
     }
 
 }

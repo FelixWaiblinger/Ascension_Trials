@@ -107,12 +107,9 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
 
         // looking   RIGHT                        LEFT
         if ((yaw > 45 && yaw < 135) || (yaw >= 225 && yaw <= 315))
-        {
             direction *= -1;
-        }
 
-        _animator.SetFloat("velocityX", direction.x);
-        _animator.SetFloat("velocityZ", direction.z);
+        _animator.SetFloat("velocity", direction.magnitude);
     }
 
     #endregion
@@ -121,7 +118,6 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
 
     public void Dash(Vector3 info)
     {
-        Debug.Log("Setting dash timer");
         _dashDurationTimer = info.x;
         _collider.enabled = info.y > 0;
     }
@@ -148,6 +144,5 @@ public class MovementController : NetworkBehaviour, IDashable, IKnockable
 
             if (_dashDurationTimer < 0) _collider.enabled = true;
         }
-        
     }
 }

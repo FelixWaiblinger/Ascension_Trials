@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Witch
   Health: 80
   Armor: 2
-  Speed: 8
+  Speed: 6.1
   Abilities:
     _serializedList:
     - Key: 0

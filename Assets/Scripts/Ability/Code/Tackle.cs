@@ -3,13 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Tackle", menuName = "Ability/Tackle")]
 public class Tackle : Ability
 {
-    
-
-    public override int Activate(Transform player)
+    public override void Activate(Transform caster)
     {
-        var origin = player.position + player.forward * Range;
+        var origin = caster.position + caster.forward * Range;
         var targets = FindTargets(origin, LayerMask.NameToLayer("Enemy"));
-        
-        return 0;
     }
 }

@@ -5,18 +5,16 @@ public class Explode : Ability
 {
     [SerializeField] private GameObject _explosionEffect;
 
-    public override int Activate(Transform origin)
+    public override void Activate(Transform caster)
     {
         var players = FindTargets(
-            origin.position,
-            origin.gameObject.layer == LayerMask.NameToLayer("Player") ?
+            caster.position,
+            caster.gameObject.layer == LayerMask.NameToLayer("Player") ?
                 LayerMask.NameToLayer("Enemy") : LayerMask.NameToLayer("Player")
         );
 
-        Instantiate(_explosionEffect, origin.position, origin.rotation);
+        Instantiate(_explosionEffect, caster.position, caster.rotation);
 
         ApplyEffects(ref Effects, players);
-        
-        return 0;
     }
 }
