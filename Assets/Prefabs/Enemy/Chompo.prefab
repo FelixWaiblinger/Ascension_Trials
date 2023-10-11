@@ -155,6 +155,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89071eddec158041a6eda6b8e791827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyDeathEvent: {fileID: 0}
+  _status: {fileID: 0}
+  _maxHealth: 0
+  _armor: 0
+  _moveSpeed: 0
+  _ability: {fileID: 0}
+  _chargeVisual: {fileID: 5137123306192418792, guid: 467f4836cf5e4094f82f62bb015f63e2,
+    type: 3}
+  _chargeTime: 0
 --- !u!1001 &6807378921887944941
 PrefabInstance:
   m_ObjectHideFlags: 0

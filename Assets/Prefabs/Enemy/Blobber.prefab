@@ -222,11 +222,11 @@ MonoBehaviour:
   _status: {fileID: 1782850132498276282}
   _maxHealth: 15
   _armor: 2
-  _moveSpeed: 2.4
+  _moveSpeed: 5
   _ability: {fileID: 11400000, guid: e08919ef35f4695428e6e79569d79d80, type: 2}
+  _chargeVisual: {fileID: 7372366795204380506, guid: a8c492d3449b3bb4e8e8b1ce72020142,
+    type: 3}
   _chargeTime: 2
-  _attackRange: 5
-  _explosionRadiusVisual: {fileID: 3525223877067270198}
 --- !u!4 &4482815315520779422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9143190425003713782, guid: 96f5bfde0a6b1104cba492fd58df1237,

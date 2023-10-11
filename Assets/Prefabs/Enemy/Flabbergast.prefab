@@ -177,9 +177,9 @@ MonoBehaviour:
   _armor: 3
   _moveSpeed: 2.5
   _ability: {fileID: 0}
+  _chargeVisual: {fileID: 5824670795371433373, guid: 07b376e68ea9ba042a2bd25e3f5bdd60,
+    type: 3}
   _chargeTime: 1
-  _attackRange: 6
-  _shootChargeVisual: {fileID: 3964317993040383600}
 --- !u!4 &4230412958172368087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9143190425003713782, guid: 96f5bfde0a6b1104cba492fd58df1237,

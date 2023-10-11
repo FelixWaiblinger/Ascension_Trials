@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveLockEvent: {fileID: 11400000, guid: 52f5af63f45c3e54ebf20bb642f3f8f8, type: 2}
-  _moveSpeed: 8
+  _moveSpeed: 6
   _turnSpeed: 10
   _accelerationCurve:
     serializedVersion: 2
@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusPoint: {fileID: 9098926243010864668}
-  _lookAhead: 1
-  _followSmoothness: 0.5
+  _lookAhead: 2
+  _followSmoothness: 1
   _options: {fileID: 11400000, guid: 517c035c39031b54186d3e0ca9c96506, type: 2}
   _optionChangeEvent: {fileID: 11400000, guid: d03f7a0102c92dd4794a49977342abc2, type: 2}
 --- !u!114 &7281031218217087867
