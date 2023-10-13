@@ -126,11 +126,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blobber
       objectReference: {fileID: 0}
-    - target: {fileID: 6920645203661052412, guid: 96f5bfde0a6b1104cba492fd58df1237,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8042486449176785241, guid: 96f5bfde0a6b1104cba492fd58df1237,
         type: 3}
       propertyPath: m_Layer
@@ -242,7 +237,7 @@ MonoBehaviour:
   _status: {fileID: 1782850132498276282}
   _maxHealth: 15
   _armor: 2
-  _moveSpeed: 5
+  _moveSpeed: 4.8
   _ability: {fileID: 11400000, guid: e08919ef35f4695428e6e79569d79d80, type: 2}
   _chargeVisual: {fileID: 3525223877067270198}
   _chargeTime: 2

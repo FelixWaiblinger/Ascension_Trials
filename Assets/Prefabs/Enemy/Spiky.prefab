@@ -164,7 +164,7 @@ MonoBehaviour:
   _status: {fileID: 7728307315470104248}
   _maxHealth: 20
   _armor: 3
-  _moveSpeed: 2.6
+  _moveSpeed: 5.2
   _ability: {fileID: 11400000, guid: e10f4054ce52d7846aa2988a2f8bff97, type: 2}
   _chargeVisual: {fileID: 1590415177872986601, guid: 52026e551a4897645a19068c284f3b3a,
     type: 3}

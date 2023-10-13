@@ -22,6 +22,8 @@ MonoBehaviour:
     _serializedList:
     - Key: {fileID: 11400000, guid: f14a5524afc8e64409cafd17be5db98e, type: 2}
       Value: {x: 3, y: 0, z: 0}
+    - Key: {fileID: 11400000, guid: 28bbebea01afd4f45829ec6b5f5ba5bb, type: 2}
+      Value: {x: 0, y: 0, z: 2}
     - Key: {fileID: 11400000, guid: a5cec9ad6e10bf742acf57b874b38f76, type: 2}
       Value: {x: 1.5, y: 0, z: 0}
   VisualEffect: {fileID: 3432958286849152088, guid: 466380097609e1e4bbff9ba014db8e71,

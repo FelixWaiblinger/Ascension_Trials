@@ -12,8 +12,13 @@ public abstract class Ability : ScriptableObject
     public AnimationClip Animation;
     public SerializedDictionary<AbilityEffect, Vector3> Effects;
 
-    protected LayerMask _enemyLayer = LayerMask.GetMask(new string[]{"Enemy"});
-    protected LayerMask _playerLayer = LayerMask.GetMask(new string[]{"Player"});
+    protected LayerMask _enemyLayer, _playerLayer;
+
+    void OnEnable()
+    {
+        _enemyLayer = LayerMask.GetMask(new string[]{"Enemy"});
+        _playerLayer = LayerMask.GetMask(new string[]{"Player"});
+    }
 
     public abstract void Activate(Transform caster);
 

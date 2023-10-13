@@ -43,8 +43,11 @@ public abstract class Enemy : NetworkBehaviour, IDamagable, IDoTable, IStunnable
     {
         if (other.transform != _target) return;
 
+        if (_isAttacking) return;
+
         _isAttacking = true;
         _attackTimer = _chargeTime;
+        _chargeVisual.SetActive(true);
     }
 
     #endregion
@@ -87,8 +90,6 @@ public abstract class Enemy : NetworkBehaviour, IDamagable, IDoTable, IStunnable
 
     protected virtual void ChargeAttack()
     {
-        if (!_chargeVisual.activeSelf) _chargeVisual.SetActive(true);
-
         _attackTimer -= Time.deltaTime;
     }
 

@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class TargetedShot : Ability
+[CreateAssetMenu(fileName = "TargetShot", menuName = "Ability/TargetShot")]
+public class TargetShot : Ability
 {
-    [SerializeField] private Tranquilize _projectile;
+    [SerializeField] private Projectile _projectile;
 
     public override void Activate(Transform caster)
     {
@@ -10,10 +11,10 @@ public class TargetedShot : Ability
 
         var projectile = Instantiate(
             _projectile,
-            caster.position + caster.forward,
+            caster.position,
             Quaternion.LookRotation(target.position - caster.position)
         );
 
-        ((ITargetable)projectile).Init(target);
+        projectile.Init(target);
     }
 }

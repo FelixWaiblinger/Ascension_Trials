@@ -131,6 +131,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3140425750026519231}
   m_SourcePrefab: {fileID: 100100000, guid: 96f5bfde0a6b1104cba492fd58df1237, type: 3}
+--- !u!114 &1132499606627095752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6370622353793339346, guid: 96f5bfde0a6b1104cba492fd58df1237,
+    type: 3}
+  m_PrefabInstance: {fileID: 6331934783731718938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ec5ef369f44f84c98859eb8e6a67ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2971441293489455084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9143190425003713782, guid: 96f5bfde0a6b1104cba492fd58df1237,
@@ -155,15 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89071eddec158041a6eda6b8e791827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDeathEvent: {fileID: 0}
-  _status: {fileID: 0}
-  _maxHealth: 0
-  _armor: 0
-  _moveSpeed: 0
-  _ability: {fileID: 0}
+  _enemyDeathEvent: {fileID: 11400000, guid: ba6fff69ca846eb46a6b8ed5dfb62b9c, type: 2}
+  _status: {fileID: 1132499606627095752}
+  _maxHealth: 35
+  _armor: 5
+  _moveSpeed: 4.5
+  _ability: {fileID: 11400000, guid: 7423d955f0b01cd4a87002edf9753b0d, type: 2}
   _chargeVisual: {fileID: 5137123306192418792, guid: 467f4836cf5e4094f82f62bb015f63e2,
     type: 3}
-  _chargeTime: 0
+  _chargeTime: 1.5
 --- !u!1001 &6807378921887944941
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Chomp", menuName = "Ability/Chomp")]
 public class Chomp : Ability
 {
     public override void Activate(Transform caster)
