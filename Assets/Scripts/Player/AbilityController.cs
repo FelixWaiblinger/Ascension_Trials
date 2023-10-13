@@ -50,6 +50,10 @@ public class AbilityController : NetworkBehaviour
         InputReader.dashEvent += () => Cast(Slot.Dash);
 
         _animator = GetComponentInChildren<Animator>();
+        var animOverride = new AnimatorOverrideController();
+        animOverride.runtimeAnimatorController = _animator.runtimeAnimatorController;
+        animOverride["empty"] = _slots[0].Animation;
+        _animator.runtimeAnimatorController = animOverride;
 
         foreach (var slot in _slots.Keys)
             _hud.UpdateUIElement(
@@ -178,7 +182,7 @@ public class AbilityController : NetworkBehaviour
             }
         }
         // single-use abilites
-        else _animator.Play(_slots[s].Animation.name, 0);
+        else _animator.Play("empty");//_slots[s].Animation.name, 0);
 
         // start actual casting
         _castCurrent = s;

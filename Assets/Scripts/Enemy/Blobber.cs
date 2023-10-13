@@ -7,7 +7,7 @@ public class Blobber : Enemy
         base.ChargeAttack();
 
         _chargeVisual.transform.localScale =
-            Vector3.one * Mathf.Clamp(_attackTimer * 3, 0, _ability.Range);
+            Vector3.one * Mathf.Clamp((_chargeTime - _attackTimer) * 3, 0, _ability.Range);
     }
 
     protected override void Attack()

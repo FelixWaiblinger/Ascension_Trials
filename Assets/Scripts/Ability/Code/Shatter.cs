@@ -9,7 +9,7 @@ public class Shatter : Ability
     {
         var targets = FindTargets(caster.position, LayerMask.NameToLayer("Enemy"));
 
-        Instantiate(VisualEffect, caster.position, Quaternion.identity);
+        Instantiate(VisualEffect, caster.position, Quaternion.Euler(-90, 0, 0));
 
         ApplyEffects(ref Effects, targets);
     }

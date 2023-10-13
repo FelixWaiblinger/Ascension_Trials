@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7332758511327043845}
   - component: {fileID: 4384344178701558368}
   - component: {fileID: 1359465568834132911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,6 +182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5218876477084299362, guid: 758d645f3f4f11a41a2b24784916e003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7890490393733207359, guid: 758d645f3f4f11a41a2b24784916e003,
         type: 3}
       propertyPath: m_Pivot.x
@@ -281,6 +286,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014112931521789443, guid: 758d645f3f4f11a41a2b24784916e003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741883288671577152, guid: 758d645f3f4f11a41a2b24784916e003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

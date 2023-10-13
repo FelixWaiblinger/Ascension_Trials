@@ -7,11 +7,7 @@ public class Explode : Ability
 
     public override void Activate(Transform caster)
     {
-        var players = FindTargets(
-            caster.position,
-            caster.gameObject.layer == LayerMask.NameToLayer("Player") ?
-                LayerMask.NameToLayer("Enemy") : LayerMask.NameToLayer("Player")
-        );
+        var players = FindTargets(caster.position, _enemyLayer);
 
         Instantiate(_explosionEffect, caster.position, caster.rotation);
 

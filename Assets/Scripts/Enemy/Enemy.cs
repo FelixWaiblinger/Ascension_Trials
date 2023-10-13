@@ -7,7 +7,7 @@ public abstract class Enemy : NetworkBehaviour, IDamagable, IDoTable, IStunnable
     [SerializeField] protected VoidEventChannel _enemyDeathEvent;
     [SerializeField] protected EnemyUI _status;
     protected Rigidbody _rigidBody;
-    protected Transform _target;
+    public Transform _target { get; protected set; }
 
     [Header("Stats")]
     [SerializeField] protected float _maxHealth;

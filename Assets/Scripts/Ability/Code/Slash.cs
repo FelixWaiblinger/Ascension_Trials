@@ -17,7 +17,7 @@ public class Slash : Ability, IRecastable
     public void Activate(Transform caster, int charge)
     {
         var origin = caster.position + caster.forward * Range;
-        var targets = FindTargets(origin, LayerMask.NameToLayer("Enemy"));
+        var targets = FindTargets(origin, _enemyLayer);
 
         switch (charge)
         {
