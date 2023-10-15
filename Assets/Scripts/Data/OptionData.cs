@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "OptionData", menuName = "Data/Option Data")]
+[System.Serializable]
 public class OptionData : ScriptableObject
 {
     private float _musicVolume;

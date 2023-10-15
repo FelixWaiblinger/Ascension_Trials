@@ -31,7 +31,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5292934454735086841}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -107,7 +106,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5292934454050840162}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -144,8 +142,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 3/10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3e383c47838ba89479b973491229a0bd, type: 2}
-  m_sharedMaterial: {fileID: 4251475833011049402, guid: 3e383c47838ba89479b973491229a0bd,
+  m_fontAsset: {fileID: 11400000, guid: d52b11e011a9019408cc834267de7e28, type: 2}
+  m_sharedMaterial: {fileID: -248616208200748341, guid: d52b11e011a9019408cc834267de7e28,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -170,8 +168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.88
-  m_fontSizeBase: 27.88
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -250,7 +248,6 @@ RectTransform:
   - {fileID: 5292934454735086841}
   - {fileID: 5292934454014876961}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -309,7 +306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _difficultyDialMaxAngle: 100
   _nameText: {fileID: 5292934454748077033}
-  _typeText: {fileID: 5292934454899959814}
   _playerCountText: {fileID: 5292934454014876966}
   _difficultyMeter: {fileID: 5292934454735086841}
 --- !u!114 &1580804313178355777
@@ -413,7 +409,6 @@ RectTransform:
   m_Children:
   - {fileID: 5292934453494499115}
   m_Father: {fileID: 5292934454050840162}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -451,7 +446,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5292934454050840162}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -488,8 +482,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Room name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3e383c47838ba89479b973491229a0bd, type: 2}
-  m_sharedMaterial: {fileID: 4251475833011049402, guid: 3e383c47838ba89479b973491229a0bd,
+  m_fontAsset: {fileID: 11400000, guid: d52b11e011a9019408cc834267de7e28, type: 2}
+  m_sharedMaterial: {fileID: -248616208200748341, guid: d52b11e011a9019408cc834267de7e28,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -514,12 +508,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 36
+  m_fontSizeMax: 45
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -587,7 +581,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5292934454050840162}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -624,8 +617,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game type goes here
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3e383c47838ba89479b973491229a0bd, type: 2}
-  m_sharedMaterial: {fileID: 4251475833011049402, guid: 3e383c47838ba89479b973491229a0bd,
+  m_fontAsset: {fileID: 11400000, guid: d52b11e011a9019408cc834267de7e28, type: 2}
+  m_sharedMaterial: {fileID: -248616208200748341, guid: d52b11e011a9019408cc834267de7e28,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -650,7 +643,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.85
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

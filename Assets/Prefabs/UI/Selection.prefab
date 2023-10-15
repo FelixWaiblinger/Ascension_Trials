@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1236661660673960119}
   - component: {fileID: 6141452261953923452}
   - component: {fileID: 4842807546610239055}
+  - component: {fileID: 5128713845968746604}
   m_Layer: 5
   m_Name: Selection
   m_TagString: Untagged
@@ -161,7 +162,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416993543006575828}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -256,3 +257,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5128713845968746604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416993543006575828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca666b981a6b694388e44e37fa6f100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toolTip: {fileID: 0}
